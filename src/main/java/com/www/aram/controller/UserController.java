@@ -1,5 +1,8 @@
 package com.www.aram.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -19,4 +22,30 @@ public class UserController {
 	public String loginForm() {
 		return "user/loginForm";
 	}
+	
+	@GetMapping("/user/updateUserForm")
+	public String updateUserForm() {
+		return "user/updateUserForm";
+	}
+	
+//	public boolean idCheck(String username, String password) {
+//		if(username.equals("admin")&&password.equals("1234")) {
+//			return true;
+//		} else {
+//			return false;
+//		}
+//	}
+//	
+//	public boolean remember(boolean remember) {
+//		return remember;
+//	}
+//	
+//	public boolean isLogin(HttpServletRequest request) {
+//		HttpSession session = request.getSession();
+//		if(session.getAttribute("id") == null) {
+//			return false;
+//		} else {
+//			return true;
+//		}
+//	}
 }

@@ -36,7 +36,13 @@ public class User {
 
 	@Column(nullable = false, length = 100) // Hash (비밀번호 암호화)
 	private String password;
-
+	
+	@Column(nullable = false, length = 100) // Hash (비밀번호 암호화)
+	private String passwordCheck;
+	
+	@Column(nullable=false, length = 30)
+	private String name;
+	
 	@Column(nullable = false, length = 50)
 	private String email;
 
